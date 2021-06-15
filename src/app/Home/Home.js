@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState,useEffect} from 'react';
 import {
   Text,
   TextInput,
@@ -9,7 +9,8 @@ import {
 } from 'react-native';
 
 function Home() {
-  const [open, setOpen] = useState(false);
+    const [open, setOpen] = useState();
+
   return (
       <ScrollView>
     <View>

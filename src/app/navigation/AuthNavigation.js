@@ -5,6 +5,7 @@ import Home from '../Home/Home';
 const AuthNavigation = createStackNavigtor(
   {
     Login: {screen: Login},
+    Home: {screen: Home}
   },
   {
     initialRouterName: 'Login',
