@@ -1,17 +1,19 @@
 import React from 'react';
-import {
-  SafeAreaView,
-} from 'react-native';
+import { createDrawerNavigator } from '@react-navigation/drawer';
+import { NavigationContainer } from '@react-navigation/native';
 import Login from './src/app/Login/Login';
-import SideMenu from './src/app/side menu/sideMenu';
+import Home from './src/app/Home/Home';
+
+const Drawer = createDrawerNavigator();
 
 const App = () => {
   return (
-    <SafeAreaView >
-      <Login />
-      {/* <SideMenu /> */}
-      
-    </SafeAreaView>
+    <NavigationContainer>
+      <Drawer.Navigator initialRouteName="Login">
+        <Drawer.Screen name="Home" component={Home} />
+        <Drawer.Screen name="Login" component={Login} />
+      </Drawer.Navigator>
+    </NavigationContainer>
   );
 };
 
