@@ -10,8 +10,8 @@ const App = () => {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Login">
-        <Drawer.Screen name="Home" component={Home} />
         <Drawer.Screen name="Login" component={Login} />
+        <Drawer.Screen name="Home" component={Home} />
       </Drawer.Navigator>
     </NavigationContainer>
   );
